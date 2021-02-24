@@ -15,5 +15,5 @@ docker-compose up -d
 ## Or docker run
 
 ```sh
-docker run naoufalzerai/ctznserver DOMAIN=localhost
+docker run -e DOMAIN=localhost naoufalzerai/ctznserver 
 ```
