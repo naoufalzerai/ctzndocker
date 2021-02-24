@@ -5,7 +5,7 @@ services:
       context: ./
       dockerfile: ./server/Dockerfile
     environment:
-      - DOMAIN=localhost
+      - DOMAIN=exemple.com
   proxy:
     build: 
       context: ./
@@ -17,4 +17,4 @@ services:
       - nginx-letsencrypt:/etc/letsencrypt
 
 volumes:
-  nginx-letsencrypt:    
+  nginx-letsencrypt:
