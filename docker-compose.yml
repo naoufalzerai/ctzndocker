@@ -1,0 +1,20 @@
+version: "3.1"
+services:
+  server:
+    build: 
+      context: ./
+      dockerfile: ./server/Dockerfile
+    environment:
+      - DOMAIN=localhost
+  proxy:
+    build: 
+      context: ./
+      dockerfile: ./proxy/Dockerfile
+    ports:
+      - 801:80
+      - 4431:443
+    volumes:
+      - nginx-letsencrypt:/etc/letsencrypt
+
+volumes:
+  nginx-letsencrypt:    
